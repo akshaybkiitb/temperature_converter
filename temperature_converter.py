@@ -2,14 +2,13 @@
 
 #Using functions
 
-def temp_convert(temp_in_celsius):
+def temp_convert():
+    user_input = input("Enter temperature in Celsius: ")
+    temp_in_celsius = int(user_input)
     temp_in_farenheit = (temp_in_celsius * 9/5) + 32
-    return str(temp_in_celsius) + " degrees Celsius is " + str(temp_in_farenheit) + " degrees Farenheit"
+    if float(user_input) > 38:
+        print("It is relly hot!")
 
-user_input = input("Enter temperature in Celsius: ")
-farenheit_result = temp_convert(float(user_input))
+    print(str(temp_in_celsius) + " degrees Celsius is " + str(temp_in_farenheit) + " degrees Farenheit")
 
-if float(user_input) > 38:
-    print("It is relly hot!")
-
-print(farenheit_result)
+temp_convert()
